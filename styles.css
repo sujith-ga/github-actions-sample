@@ -1,11 +1,26 @@
 /* styles.css */
 body {
-  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: auto;
+  background-color: #9EC8B9;
   font-family: Arial, sans-serif;
 }
+html {
+    overflow: hidden;
+    height: 100%;
+}
 
-h1 {
-  color: #333;
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #092635;
+  margin-top: 0px;
+  height: 50px;
+  font-size: larger;
 }
 
 button {
@@ -14,4 +29,13 @@ button {
    border-width: 0;
    padding: 10px;
    color: white;
+   margin: auto;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%); 
+}
+
+.joke-block {
+  text-align: center;
 }
