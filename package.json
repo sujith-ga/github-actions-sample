@@ -1,0 +1,21 @@
+{
+  "name": "github-actions-sample",
+  "version": "1.0.0",
+  "description": "[![Deploy static content to Pages](https://github.com/sujithkp-ga/github-actions-sample/actions/workflows/staticdeploy.yml/badge.svg)](https://github.com/sujithkp-ga/github-actions-sample/actions/workflows/staticdeploy.yml)",
+  "main": "script.js",
+  "type": "module",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@playwright/test": "^1.40.1",
+    "cypress": "^13.6.2",
+    "http-server": "^14.1.1"
+  }
+}
