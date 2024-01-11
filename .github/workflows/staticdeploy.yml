@@ -11,10 +11,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
-      - name: Cypress run
-        id: cypress
+      - name: Run Cypress Tests
         uses: cypress-io/github-action@v6
         with:
           start: npm start
@@ -33,9 +30,18 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
-          # Upload entire repository
         with:
+          # Upload entire repository
           path: '.'
+
+      # Set permissions for deployment
+      - name: Set Permissions
+        uses: actions/permissions-sync@v2
+        with:
+          contents: 'read'
+          pages: 'write'
+          id-token: 'write'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
